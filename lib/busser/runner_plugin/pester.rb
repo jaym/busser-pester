@@ -28,7 +28,7 @@ class Busser::RunnerPlugin::Pester < Busser::RunnerPlugin::Base
     banner "[pester] Running"
     pester_path = suite_path('pester').to_s
     Dir.chdir(pester_path) do
-      run!("powershell.exe -NonInteractive -NoProfile -Command 'Import-Module Pester'; Invoke-Pester -EnableExit'")
+      run!("powershell.exe -NonInteractive -NoProfile -Command \"Import-Module Pester; Invoke-Pester -EnableExit\"")
     end
   end
 end
