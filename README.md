@@ -4,11 +4,6 @@ A [Busser](https://github.com/test-kitchen/busser) runner plugin for [Pester](ht
 
 ## <a name="installation"></a> Installation and Setup
 
-This does not work yet. The only way to currently use this is to manually
-`rake build` this gem, install it, run `busser plugin install pester --force_postinstall`,
-and then `busser test pester`. And don’t forget to set BUSSER_ROOT.
-
-Once there is a gem, busser will be able to install it automatically.
 
 ## <a name="usage"></a> Usage
 
