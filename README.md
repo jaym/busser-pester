@@ -1,31 +1,53 @@
-# Busser::Pester
+# <a name="title"></a> Busser::RunnerPlugin::Pester
 
-TODO: Write a gem description
+A [Busser](https://github.com/test-kitchen/busser) runner plugin for [Pester](https://github.com/pester/Pester)
 
-## Installation
+## <a name="installation"></a> Installation and Setup
 
-Add this line to your application's Gemfile:
+This does not work yet. The only way to currently use this is to manually
+`rake build` this gem, install it, run `busser plugin install pester --force_postinstall`,
+and then `busser test pester`. And don’t forget to set BUSSER_ROOT.
 
-```ruby
-gem 'busser-pester'
+Once there is a gem, busser will be able to install it automatically.
+
+## <a name="usage"></a> Usage
+
+Please put test files into [COOKBOOK]/test/integration/[SUITES]/pester/
+
+```
+-- [COOKBOOK]
+  `-- test
+     `-- integration
+        `-- default
+           `-- pester
+              `-- Your.Tests.ps1
 ```
 
-And then execute:
+## <a name="development"></a> Development
 
-    $ bundle
+* Source hosted at [GitHub][repo]
+* Report issues/questions/feature requests on [GitHub Issues][issues]
 
-Or install it yourself as:
+Pull requests are very welcome! Make sure your patches are well tested.
+Ideally create a topic branch for every separate change you make. For
+example:
 
-    $ gem install busser-pester
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/busser-pester/fork )
+1. Fork the repo
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+5. Create new Pull Request
+
+## <a name="authors"></a> Authors
+
+Created and maintained by [Jay Mundrawala][author] (<jdmundrawala@gmail.com>)
+
+## <a name="license"></a> License
+
+Apache 2.0 (see [LICENSE][license])
+
+
+[author]:           https://github.com/jdmundrawala
+[issues]:           https://github.com/jdmundrawala/busser-pester/issues
+[license]:          https://github.com/jdmundrawala/busser-pester/blob/master/LICENSE
+[repo]:             https://github.com/jdmundrawala/busser-pester
