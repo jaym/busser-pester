@@ -20,12 +20,12 @@ class Busser::RunnerPlugin::Pester < Busser::RunnerPlugin::Base
   postinstall do
     banner "[pester] Installing PsGet"
     download_psget = <<-DOWNLOADPSGET 
-      c:\\windows\\sysnative\\windowspowershell\\v1.0\\powershell.exe -NonInteractive -NoProfile -ExecutionPolicy Bypass -Command "if (-not get-module -list pester) {iex (new-object Net.WebClient).DownloadString('http://bit.ly/GetPsGet')}"
+      c:\\windows\\sysnative\\windowspowershell\\v1.0\\powershell.exe -NonInteractive -NoProfile -ExecutionPolicy Bypass -Command "if (-not (get-module -list pester)) {iex (new-object Net.WebClient).DownloadString('http://bit.ly/GetPsGet')}"
     DOWNLOADPSGET
     run!(download_psget)
     banner "[pester] Installing Pester"
     download_pester = <<-DOWNLOADPESTER 
-      c:\\windows\\sysnative\\windowspowershell\\v1.0\\powershell.exe -NonInteractive -NoProfile -ExecutionPolicy Bypass -Command "if (-not get-module -list pester) {Import-Module PsGet; Install-Module Pester}"
+      c:\\windows\\sysnative\\windowspowershell\\v1.0\\powershell.exe -NonInteractive -NoProfile -ExecutionPolicy Bypass -Command "if (-not (get-module -list pester)) {Import-Module PsGet; Install-Module Pester}"
     DOWNLOADPESTER
     run!(download_pester)
   end
